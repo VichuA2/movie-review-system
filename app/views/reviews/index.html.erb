@@ -1,0 +1,38 @@
+<h2>Reviews for <%= @movie.name %></h2>
+
+<%= link_to "Add Review", new_movie_review_path(@movie), class: "btn btn-primary mb-3" %>
+<%= link_to "Back to Movies", movies_path, class: "btn btn-secondary mb-3" %>
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>User Email</th>
+    <th>Comment</th>
+    <th>Rating</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @reviews.each do |review| %>
+    <tr>
+      <td><%= review.user.email %></td>
+      <td><%= review.comment %></td>
+      <td><%= review.rating %></td>
+      <td>
+        <% if review.user_id == current_user.id %>
+          <%= link_to "Edit", edit_movie_review_path(@movie, review), class: "btn btn-warning btn-sm" %>
+
+          <%= button_to "Delete",
+                        movie_review_path(@movie, review),
+                        method: :delete,
+                        class: "btn btn-danger btn-sm",
+                        form: { style: "display:inline-block;" } %>
+        <% else %>
+          <span class="badge bg-secondary">View only</span>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

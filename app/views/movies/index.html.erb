@@ -1,0 +1,41 @@
+<h2>Movies</h2>
+
+<%= link_to "Add Movie", new_movie_path, class: "btn btn-primary mb-3" %>
+
+<%= form_with url: movies_path, method: :get, local: true do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search movie name", class: "form-control mb-2" %>
+  <%= date_field_tag :release_date, params[:release_date], class: "form-control mb-2" %>
+  <%= submit_tag "Search / Filter", class: "btn btn-success mb-3" %>
+<% end %>
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Release Date</th>
+    <th>Average Rating</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.name %></td>
+      <td><%= movie.release_date %></td>
+      <td><%= movie.average_rating %></td>
+      <td>
+        <%= link_to "Reviews", movie_reviews_path(movie), class: "btn btn-info btn-sm" %>
+        <%= link_to "Add Review", new_movie_review_path(movie), class: "btn btn-success btn-sm" %>
+        <%= link_to "Edit Movie", edit_movie_path(movie), class: "btn btn-warning btn-sm" %>
+        <%= button_to "Delete",
+                      movie_path(movie),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" },
+                      class: "btn btn-danger btn-sm",
+                      form: { style: "display:inline-block;" } %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

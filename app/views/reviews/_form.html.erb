@@ -1,0 +1,19 @@
+<%= form_with model: [@movie, @review], local: true do |f| %>
+  <% if @review.errors.any? %>
+    <div class="alert alert-danger">
+      <%= @review.errors.full_messages.join(", ") %>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= f.label :comment %>
+    <%= f.text_area :comment, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :rating %>
+    <%= f.number_field :rating, min: 1, max: 5, class: "form-control" %>
+  </div>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

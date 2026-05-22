@@ -1,0 +1,18 @@
+<h2>Review for <%= @movie.name %></h2>
+
+<div class="card">
+  <div class="card-body">
+    <p><strong>User Email:</strong> <%= @review.user.email %></p>
+    <p><strong>Comment:</strong> <%= @review.comment %></p>
+    <p><strong>Rating:</strong> <%= @review.rating %></p>
+  </div>
+</div>
+
+<br>
+
+<% if @review.user == current_user %>
+  <%= link_to "Edit Review", edit_movie_review_path(@movie, @review), class: "btn btn-warning" %>
+<% end %>
+
+<%= link_to "Back to Reviews", movie_reviews_path(@movie), class: "btn btn-secondary" %>
+<%= link_to "Back to Movies", movies_path, class: "btn btn-primary" %>

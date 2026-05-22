@@ -1,0 +1,19 @@
+<%= form_with model: @movie, local: true do |f| %>
+  <% if @movie.errors.any? %>
+    <div class="alert alert-danger">
+      <%= @movie.errors.full_messages.join(", ") %>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :release_date %>
+    <%= f.date_field :release_date, class: "form-control" %>
+  </div>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

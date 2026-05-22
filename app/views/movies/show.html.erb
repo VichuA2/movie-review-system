@@ -1,0 +1,13 @@
+<h2><%= @movie.name %></h2>
+
+<div class="card mb-3">
+  <div class="card-body">
+    <p><strong>Release Date:</strong> <%= @movie.release_date %></p>
+    <p><strong>Average Rating:</strong> <%= @movie.average_rating %></p>
+  </div>
+</div>
+
+<%= link_to "Add Review", new_movie_review_path(@movie), class: "btn btn-success" %>
+<%= link_to "View Reviews", movie_reviews_path(@movie), class: "btn btn-info" %>
+<%= link_to "Edit Movie", edit_movie_path(@movie), class: "btn btn-warning" %>
+<%= link_to "Back to Movies", movies_path, class: "btn btn-secondary" %>
