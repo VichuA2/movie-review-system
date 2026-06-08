@@ -1,5 +1,7 @@
-Rails.application.routes.draw do
+kkkRails.application.routes.draw do
   devise_for :users
+
+  get "/health", to: proc { [200, {}, ["OK"]] }
 
   root "movies#index"
 
