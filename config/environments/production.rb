@@ -117,4 +117,9 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+  # config/environments/production.rb
+
+config.hosts << "vichubro.online"
+config.hosts << "www.vichubro.online"
+config.hosts << "vishnu-manual-shared-alb-628573613.ap-south-1.elb.amazonaws.com"
 end
