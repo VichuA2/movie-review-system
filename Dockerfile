@@ -5,7 +5,8 @@ RUN apt-get update -qq && apt-get install -y \
     nodejs \
     npm \
     sqlite3 \
-    libsqlite3-dev
+    libsqlite3-dev \
+    default-libmysqlclient-dev
 
 WORKDIR /app
 
