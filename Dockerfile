@@ -7,8 +7,6 @@ RUN apt-get update -qq && apt-get install -y \
     sqlite3 \
     libsqlite3-dev
 
-RUN npm install -g yarn
-
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
@@ -18,11 +16,6 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 COPY . .
-
-ENV RAILS_ENV=production
-ENV SECRET_KEY_BASE=dummy_secret_key_for_assets
-
-RUN bundle exec rails assets:precompile
 
 EXPOSE 3000
 
