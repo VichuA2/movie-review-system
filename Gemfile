@@ -5,6 +5,8 @@ ruby '3.0.4'
 
 gem 'rails', '6.1.5'
 
+gem 'mysql2', '~> 0.5'
+
 gem 'sqlite3', '~> 1.4'
 
 gem 'puma', '~> 5.0'
