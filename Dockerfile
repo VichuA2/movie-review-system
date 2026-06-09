@@ -17,6 +17,11 @@ RUN npm install
 
 COPY . .
 
+ENV RAILS_ENV=production
+ENV SECRET_KEY_BASE=dummy_secret_key_for_assets
+
+RUN bundle exec rails assets:precompile
+
 EXPOSE 3000
 
 CMD ["bash", "-c", "bundle exec rails db:migrate && bundle exec rails server -b 0.0.0.0 -p 3000"]
