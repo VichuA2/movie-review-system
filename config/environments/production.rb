@@ -21,6 +21,5 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
   config.active_record.dump_schema_after_migration = false
-  config.hosts << "ror.vichubro.online"
-  config.hosts << "vishnu-manual-shared-alb-628573613.ap-south-1.elb.amazonaws.com"
+  config.hosts.clear
 end
