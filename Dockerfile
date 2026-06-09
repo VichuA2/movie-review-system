@@ -7,6 +7,8 @@ RUN apt-get update -qq && apt-get install -y \
     sqlite3 \
     libsqlite3-dev
 
+RUN npm install -g yarn
+
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
