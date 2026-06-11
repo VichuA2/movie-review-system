@@ -1,6 +1,0 @@
-.git
-log/*
-tmp/*
-node_modules
-vendor/bundle
-.idea
