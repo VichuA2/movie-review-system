@@ -1,0 +1,170 @@
+.
+├── app
+│   ├── assets
+│   │   ├── config
+│   │   │   └── manifest.js
+│   │   ├── images
+│   │   └── stylesheets
+│   │       ├── application.css
+│   │       ├── movies.scss
+│   │       └── reviews.scss
+│   ├── channels
+│   │   └── application_cable
+│   │       ├── channel.rb
+│   │       └── connection.rb
+│   ├── controllers
+│   │   ├── application_controller.rb
+│   │   ├── concerns
+│   │   ├── movies_controller.rb
+│   │   └── reviews_controller.rb
+│   ├── helpers
+│   │   ├── application_helper.rb
+│   │   ├── movies_helper.rb
+│   │   └── reviews_helper.rb
+│   ├── javascript
+│   │   ├── channels
+│   │   │   ├── consumer.js
+│   │   │   └── index.js
+│   │   └── packs
+│   │       └── application.js
+│   ├── jobs
+│   │   └── application_job.rb
+│   ├── mailers
+│   │   └── application_mailer.rb
+│   ├── models
+│   │   ├── application_record.rb
+│   │   ├── concerns
+│   │   ├── movie.rb
+│   │   ├── review.rb
+│   │   └── user.rb
+│   └── views
+│       ├── layouts
+│       │   ├── application.html.erb
+│       │   ├── mailer.html.erb
+│       │   └── mailer.text.erb
+│       ├── movies
+│       │   ├── create.html.erb
+│       │   ├── destroy.html.erb
+│       │   ├── edit.html.erb
+│       │   ├── _form.html.erb
+│       │   ├── index.html.erb
+│       │   ├── new.html.erb
+│       │   ├── show.html.erb
+│       │   └── update.html.erb
+│       └── reviews
+│           ├── create.html.erb
+│           ├── destroy.html.erb
+│           ├── edit.html.erb
+│           ├── _form.html.erb
+│           ├── index.html.erb
+│           ├── new.html.erb
+│           ├── show.html.erb
+│           └── update.html.erb
+├── babel.config.js
+├── bin
+│   ├── bundle
+│   ├── bundle.cmd
+│   ├── rails
+│   ├── rake
+│   ├── setup
+│   ├── webpack
+│   ├── webpack-dev-server
+│   └── yarn
+├── buildspec.yml
+├── config
+│   ├── application.rb
+│   ├── boot.rb
+│   ├── cable.yml
+│   ├── credentials.yml.enc
+│   ├── database.yml
+│   ├── environment.rb
+│   ├── environments
+│   │   ├── development.rb
+│   │   ├── production.rb
+│   │   └── test.rb
+│   ├── initializers
+│   │   ├── application_controller_renderer.rb
+│   │   ├── assets.rb
+│   │   ├── backtrace_silencers.rb
+│   │   ├── content_security_policy.rb
+│   │   ├── cookies_serializer.rb
+│   │   ├── devise.rb
+│   │   ├── filter_parameter_logging.rb
+│   │   ├── inflections.rb
+│   │   ├── mime_types.rb
+│   │   ├── permissions_policy.rb
+│   │   └── wrap_parameters.rb
+│   ├── locales
+│   │   ├── devise.en.yml
+│   │   └── en.yml
+│   ├── puma.rb
+│   ├── routes.rb
+│   ├── storage.yml
+│   ├── webpack
+│   │   ├── development.js
+│   │   ├── environment.js
+│   │   ├── production.js
+│   │   └── test.js
+│   └── webpacker.yml
+├── config.ru
+├── db
+│   ├── migrate
+│   │   ├── 20260522100622_devise_create_users.rb
+│   │   ├── 20260522101251_create_movies.rb
+│   │   └── 20260522101435_create_reviews.rb
+│   ├── schema.rb
+│   └── seeds.rb
+├── Dockerfile
+├── Gemfile
+├── Gemfile.lock
+├── global-bundle.pem
+├── lib
+│   ├── assets
+│   └── tasks
+├── log
+├── node_modules
+│   └── postcss-initial
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── public
+│   ├── 404.html
+│   ├── 422.html
+│   ├── 500.html
+│   ├── apple-touch-icon.png
+│   ├── apple-touch-icon-precomposed.png
+│   ├── favicon.ico
+│   └── robots.txt
+├── Rakefile
+├── README.md
+├── storage
+├── test
+│   ├── application_system_test_case.rb
+│   ├── channels
+│   │   └── application_cable
+│   │       └── connection_test.rb
+│   ├── controllers
+│   │   ├── movies_controller_test.rb
+│   │   └── reviews_controller_test.rb
+│   ├── fixtures
+│   │   ├── files
+│   │   ├── movies.yml
+│   │   ├── reviews.yml
+│   │   └── users.yml
+│   ├── helpers
+│   ├── integration
+│   ├── mailers
+│   ├── models
+│   │   ├── movie_test.rb
+│   │   ├── review_test.rb
+│   │   └── user_test.rb
+│   ├── system
+│   └── test_helper.rb
+├── tmp
+│   ├── pids
+│   └── sockets
+├── tree.txt
+├── vendor
+└── yarn.lock
+
+53 directories, 115 files
